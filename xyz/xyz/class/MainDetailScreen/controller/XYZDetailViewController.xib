@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYZDetailViewController">
+            <connections>
+                <outlet property="appraisalView" destination="NN5-f4-uQa" id="3SG-dF-HwR"/>
+                <outlet property="changeIMGButton" destination="Aw1-Sm-pfd" id="l0l-od-ZrR"/>
+                <outlet property="condLabel" destination="lMD-C0-xlg" id="bEX-22-EsG"/>
+                <outlet property="conditionsButtonsView" destination="tbX-HU-nMd" id="wtZ-wW-fKQ"/>
+                <outlet property="detailView" destination="wK3-9p-fKH" id="Xwz-ua-T9T"/>
+                <outlet property="housePicImageView" destination="G3U-Yu-pme" id="8rz-rZ-u5V"/>
+                <outlet property="inputPhoneTextField" destination="y3B-Xh-Izv" id="FWB-Ki-iST"/>
+                <outlet property="memberPicImageView" destination="Whd-2e-PAj" id="8ls-UU-nyz"/>
+                <outlet property="nameTextField" destination="PSY-G4-koa" id="2ZF-c4-AJt"/>
+                <outlet property="picImage" destination="U6X-EJ-dQU" id="cgK-Ly-LEK"/>
+                <outlet property="scoreLabel" destination="zUR-7N-Gsd" id="ZKm-5u-szE"/>
+                <outlet property="serviceButtonsView" destination="vvX-JQ-njq" id="yld-Fp-DIj"/>
+                <outlet property="serviceLabel" destination="fXj-x2-iC0" id="Jct-OM-YjT"/>
+                <outlet property="techLabel" destination="uWm-P4-oNR" id="BBt-zG-Tsp"/>
+                <outlet property="technologyButtonsView" destination="g44-XK-tNP" id="58O-Ww-Jk8"/>
+                <outlet property="uploadButton" destination="W2u-Cg-hvE" id="y6p-f1-0gx"/>
+                <outlet property="view" destination="bBc-yE-jqU" id="GU7-RO-zYb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bBc-yE-jqU">
+            <rect key="frame" x="0.0" y="0.0" width="655" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="02_detail_bg.png" id="x6i-IL-wa4">
+                    <rect key="frame" x="0.0" y="0.0" width="655" height="768"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="wK3-9p-fKH" userLabel="DetailView">
+                    <rect key="frame" x="57" y="80" width="540" height="614"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="02_detail_imagebg.png" id="SPA-1M-zuK">
+                            <rect key="frame" x="178" y="14" width="185" height="185"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="U6X-EJ-dQU" customClass="AsyncImageView">
+                            <rect key="frame" x="193" y="28" width="155" height="157"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入名字" textAlignment="center" minimumFontSize="17" id="PSY-G4-koa">
+                            <rect key="frame" x="198" y="223" width="145" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V77-gK-bP9">
+                            <rect key="frame" x="363" y="170" width="92" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="NN5-f4-uQa" userLabel="AppraisalView">
+                            <rect key="frame" x="-10" y="288" width="561" height="296"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="04_ appraisal_allwhitestar.png" id="6tx-nh-dvt">
+                                    <rect key="frame" x="280" y="31" width="180" height="26"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="04_ appraisal_allwhitestar.png" id="QHS-w4-s9n">
+                                    <rect key="frame" x="280" y="72" width="180" height="26"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="04_ appraisal_allwhitestar.png" id="6Rt-8c-TQI">
+                                    <rect key="frame" x="280" y="156" width="180" height="26"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="04_appraisal_line.png" id="9hK-32-fCg">
+                                    <rect key="frame" x="68" y="121" width="396" height="1"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="技术评分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P11-I2-T9p">
+                                    <rect key="frame" x="188" y="36" width="68" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务评分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hO3-WB-pjt">
+                                    <rect key="frame" x="188" y="74" width="68" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="环境评分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="URC-34-0Z1">
+                                    <rect key="frame" x="188" y="158" width="68" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UxN-ha-pbI">
+                                    <rect key="frame" x="215" y="232" width="130" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" backgroundImage="04_appraisal_submit_h.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted" backgroundImage="04_appraisal_submit_n.png"/>
+                                    <connections>
+                                        <action selector="submitAppraiseButtonAction:" destination="-1" eventType="touchUpInside" id="uFy-Ze-u8p"/>
+                                    </connections>
+                                </button>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Whd-2e-PAj" userLabel="MemberPicImage" customClass="AsyncImageView">
+                                    <rect key="frame" x="70" y="36" width="63" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="G3U-Yu-pme" userLabel="HousePicImage" customClass="AsyncImageView">
+                                    <rect key="frame" x="70" y="137" width="63" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <view contentMode="scaleToFill" id="g44-XK-tNP" userLabel="TechnologyAllButtonsView">
+                                    <rect key="frame" x="270" y="26" width="203" height="39"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A1p-Vt-tvb">
+                                            <rect key="frame" x="162" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="Q4t-fA-lAz"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GaV-bo-SZh">
+                                            <rect key="frame" x="124" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="CXh-oF-vWv"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jGC-bn-KMM">
+                                            <rect key="frame" x="86" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="ivr-rh-bi4"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nhR-Qa-Mef">
+                                            <rect key="frame" x="48" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="5RF-v8-OXD"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Cqa-4e-wiG">
+                                            <rect key="frame" x="9" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="2ZR-6J-aqR"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="vvX-JQ-njq" userLabel="ServiceAllButtonsView">
+                                    <rect key="frame" x="270" y="67" width="203" height="39"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dwm-dW-pnL">
+                                            <rect key="frame" x="162" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="UlP-0T-6bj"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gUE-Ru-xPM">
+                                            <rect key="frame" x="124" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="Bko-Zs-VMQ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EUD-cD-z1E">
+                                            <rect key="frame" x="86" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="g3r-Ws-pxp"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VvT-1q-D8s">
+                                            <rect key="frame" x="48" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="8uT-5z-39r"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Fhn-7e-Vs3">
+                                            <rect key="frame" x="9" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="VNt-pi-aBQ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="tbX-HU-nMd" userLabel="ConditionsAllButtonsView">
+                                    <rect key="frame" x="270" y="151" width="203" height="39"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bks-l9-psa">
+                                            <rect key="frame" x="162" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="1Cg-MH-hoL"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Svi-sC-VSi">
+                                            <rect key="frame" x="124" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="xkL-jz-owy"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x0w-hl-hub">
+                                            <rect key="frame" x="86" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="32H-bs-8F2"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XcT-vL-eE6">
+                                            <rect key="frame" x="48" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="DXh-hY-afk"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bcS-o0-qgQ">
+                                            <rect key="frame" x="9" y="5" width="28" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="04_appraisal_yellowstar.png"/>
+                                            <connections>
+                                                <action selector="starButtonAction:" destination="-1" eventType="touchUpInside" id="LSW-T4-Yk4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uWm-P4-oNR">
+                                    <rect key="frame" x="499" y="36" width="42" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fXj-x2-iC0">
+                                    <rect key="frame" x="499" y="78" width="42" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lMD-C0-xlg">
+                                    <rect key="frame" x="499" y="160" width="42" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Aw1-Sm-pfd">
+                            <rect key="frame" x="320" y="18" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="_changeImage:" destination="-1" eventType="touchUpInside" id="4UF-RA-mns"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </view>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W2u-Cg-hvE" userLabel="uploadButton">
+                    <rect key="frame" x="262" y="662" width="130" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="05_snkey_submit_h.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="05_snkey_submit_n.png"/>
+                    <connections>
+                        <action selector="upLoadButtonAction:" destination="-1" eventType="touchUpInside" id="Qsf-Ia-gRO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <view contentMode="scaleToFill" id="2wo-Lt-4bG">
+            <rect key="frame" x="0.0" y="0.0" width="561" height="213"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="04_appraisal_okbg.png" id="6f5-rW-tye">
+                    <rect key="frame" x="0.0" y="0.0" width="561" height="213"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="感谢你的评价，本次积分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dbl-Wh-aSM">
+                    <rect key="frame" x="150" y="38" width="187" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zUR-7N-Gsd">
+                    <rect key="frame" x="346" y="38" width="77" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.67843137254901964" green="0.40784313725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="izT-y1-CpL">
+                    <rect key="frame" x="34" y="100" width="77" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="y3B-Xh-Izv">
+                    <rect key="frame" x="139" y="91" width="238" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dyv-Mh-Vdm">
+                    <rect key="frame" x="433" y="91" width="87" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="04_appraisal_ok_n.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="04_appraisal_ok_h.png"/>
+                    <connections>
+                        <action selector="finishedButtonAction:" destination="-1" eventType="touchUpInside" id="xe4-ML-d5N"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="02_detail_line.png" id="B81-ed-7Xg">
+            <rect key="frame" x="0.0" y="0.0" width="255" height="1"/>
+            <autoresizingMask key="autoresizingMask"/>
+        </imageView>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nhf-F4-bdw" userLabel="AppraiseButton">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="43"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" backgroundImage="02_detail_appraise_n.png">
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="highlighted" backgroundImage="02_detail_appraise_h.png"/>
+            <connections>
+                <action selector="appraiseButtonAction:" destination="-1" eventType="touchUpInside" id="dTa-NK-BbV"/>
+            </connections>
+        </button>
+        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ijt-W0-pGg">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="02_detail_appraise_h.png" width="125" height="43"/>
+        <image name="02_detail_appraise_n.png" width="125" height="43"/>
+        <image name="02_detail_bg.png" width="655" height="748"/>
+        <image name="02_detail_imagebg.png" width="160" height="160"/>
+        <image name="02_detail_line.png" width="255" height="1"/>
+        <image name="04_ appraisal_allwhitestar.png" width="180" height="26"/>
+        <image name="04_appraisal_line.png" width="455" height="1"/>
+        <image name="04_appraisal_ok_h.png" width="87" height="40"/>
+        <image name="04_appraisal_ok_n.png" width="87" height="40"/>
+        <image name="04_appraisal_okbg.png" width="561" height="213"/>
+        <image name="04_appraisal_submit_h.png" width="150" height="50"/>
+        <image name="04_appraisal_submit_n.png" width="150" height="50"/>
+        <image name="04_appraisal_yellowstar.png" width="28" height="26"/>
+        <image name="05_snkey_submit_h.png" width="130" height="50"/>
+        <image name="05_snkey_submit_n.png" width="130" height="50"/>
+    </resources>
+</document>

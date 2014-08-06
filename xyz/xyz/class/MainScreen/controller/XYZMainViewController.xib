@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYZMainViewController">
+            <connections>
+                <outlet property="appointmentButton" destination="7L3-T2-HFO" id="ezM-Dg-1x3"/>
+                <outlet property="contentView" destination="60E-yN-pnc" id="b4a-cr-IiA"/>
+                <outlet property="memberButton" destination="EUe-gV-HDr" id="Kxs-1u-Kkl"/>
+                <outlet property="membersGridView" destination="VqZ-6m-c6l" id="aFj-Zu-5Y5"/>
+                <outlet property="navbarView" destination="JAj-5Q-Ghi" id="Oh2-A0-D15"/>
+                <outlet property="newsButton" destination="rOY-RO-4rT" id="kdx-UV-oM0"/>
+                <outlet property="pullButton" destination="akg-9a-9dY" id="4Ri-il-1Qp"/>
+                <outlet property="rankingButton" destination="rFV-Gy-P9i" id="FgV-RM-vHW"/>
+                <outlet property="snExchangeButton" destination="yks-1s-iSd" id="YuA-jk-HwH"/>
+                <outlet property="view" destination="ED7-EI-vaE" id="3WK-O2-Wxb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ED7-EI-vaE">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="01_main_bg.png" id="d0J-74-XKi">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DoY-2E-c7d" userLabel="AllButton">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="hideButtonAction:" destination="-1" eventType="touchUpInside" id="6yY-c0-bbm"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="VqZ-6m-c6l" customClass="GMGridView">
+                    <rect key="frame" x="132" y="120" width="760" height="606"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="actionDelegate" destination="-1" id="C5J-5L-QTF"/>
+                        <outlet property="dataSource" destination="-1" id="beC-8j-HpX"/>
+                    </connections>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ucr-EX-YbL">
+                    <rect key="frame" x="0.0" y="2" width="124" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="hideButtonAction:" destination="-1" eventType="touchUpInside" id="SHG-Wb-5Xb"/>
+                        <outletCollection property="gestureRecognizers" destination="XjR-jb-ad8" appends="YES" id="1rF-V2-NlA"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="JAj-5Q-Ghi" userLabel="LeftNavBarView">
+                    <rect key="frame" x="-225" y="0.0" width="225" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" image="01_main_leftnavbarbg.png" id="HlW-z0-aoq">
+                            <rect key="frame" x="0.0" y="0.0" width="253" height="768"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EUe-gV-HDr" userLabel="MemberButton">
+                            <rect key="frame" x="-20" y="94" width="253" height="87"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="01_main_leftnavbar_member_n.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="01_main_leftnavbar_member_h.png"/>
+                            <state key="highlighted" backgroundImage="01_main_leftnavbar_member_h.png"/>
+                            <connections>
+                                <action selector="memberDetailButtonAction:" destination="-1" eventType="touchUpInside" id="0JW-Pe-aR4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rFV-Gy-P9i" userLabel="RankingButton">
+                            <rect key="frame" x="-20" y="181" width="253" height="87"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="01_main_leftnavbar_ranking_n.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="01_main_leftnavbar_ranking_h.png"/>
+                            <state key="highlighted" backgroundImage="01_main_leftnavbar_ranking_h.png"/>
+                            <connections>
+                                <action selector="rankingButtonAction:" destination="-1" eventType="touchUpInside" id="iaw-3O-O41"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yks-1s-iSd" userLabel="ExchangeButton">
+                            <rect key="frame" x="-20" y="268" width="253" height="87"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="01_main_leftnavbar_sn_n.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="01_main_leftnavbar_sn_h.png"/>
+                            <state key="highlighted" backgroundImage="01_main_leftnavbar_sn_h.png"/>
+                            <connections>
+                                <action selector="exchangeButtonAction:" destination="-1" eventType="touchUpInside" id="wWv-Gb-VrZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7L3-T2-HFO" userLabel="AppointmentButton">
+                            <rect key="frame" x="-20" y="353" width="253" height="87"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="01_main_leftnavbar_appointment_n.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="01_main_leftnavbar_appointment_h.png"/>
+                            <state key="highlighted" backgroundImage="01_main_leftnavbar_appointment_h.png"/>
+                            <connections>
+                                <action selector="appointmentButtonAction:" destination="-1" eventType="touchUpInside" id="x4z-fF-ktb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rOY-RO-4rT" userLabel="NewsButton">
+                            <rect key="frame" x="-20" y="440" width="253" height="87"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="01_main_leftnavbar_news_n.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="01_main_leftnavbar_news_h.png"/>
+                            <state key="highlighted" backgroundImage="01_main_leftnavbar_news_h.png"/>
+                            <connections>
+                                <action selector="newsButtonAction:" destination="-1" eventType="touchUpInside" id="My3-ze-cVY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="sfp-Os-3O9" appends="YES" id="syp-fF-fDD"/>
+                    </connections>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="akg-9a-9dY" userLabel="PullButton">
+                    <rect key="frame" x="5" y="349" width="30" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="01_main_pullbutton.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pushdetailView:" destination="-1" eventType="touchUpInside" id="w2C-HD-zac"/>
+                    </connections>
+                </button>
+                <view alpha="0.0" contentMode="scaleToFill" id="60E-yN-pnc" userLabel="ContentView">
+                    <rect key="frame" x="223" y="0.0" width="655" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+        <swipeGestureRecognizer direction="left" id="sfp-Os-3O9">
+            <connections>
+                <action selector="hidedetailView:" destination="-1" id="8va-NG-idb"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="XjR-jb-ad8">
+            <connections>
+                <action selector="pushdetailView:" destination="-1" id="dVR-3V-rSa"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="01_main_bg.png" width="1024" height="768"/>
+        <image name="01_main_leftnavbar_appointment_h.png" width="253" height="88"/>
+        <image name="01_main_leftnavbar_appointment_n.png" width="253" height="87"/>
+        <image name="01_main_leftnavbar_member_h.png" width="253" height="88"/>
+        <image name="01_main_leftnavbar_member_n.png" width="253" height="87"/>
+        <image name="01_main_leftnavbar_news_h.png" width="253" height="88"/>
+        <image name="01_main_leftnavbar_news_n.png" width="253" height="87"/>
+        <image name="01_main_leftnavbar_ranking_h.png" width="253" height="88"/>
+        <image name="01_main_leftnavbar_ranking_n.png" width="253" height="87"/>
+        <image name="01_main_leftnavbar_sn_h.png" width="253" height="88"/>
+        <image name="01_main_leftnavbar_sn_n.png" width="253" height="88"/>
+        <image name="01_main_leftnavbarbg.png" width="253" height="748"/>
+        <image name="01_main_pullbutton.png" width="21" height="32"/>
+    </resources>
+</document>
