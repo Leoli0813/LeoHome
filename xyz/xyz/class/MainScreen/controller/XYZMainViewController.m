@@ -15,6 +15,7 @@
 #import "XYAppointmentViewController.h"
 #import "XYNewsViewController.h"
 #import "XYZDetailViewController.h"
+#import "MTAppointmentClient.h"
 
 @interface XYZMainViewController ()<GMGridViewActionDelegate,GMGridViewDataSource>
 
@@ -67,6 +68,8 @@
     }];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handleNotification:) name:@"NOTIFICATIONTOREFRESH" object:nil];
+    
+    [self _refreshAppointment];
     
 }
 
@@ -164,6 +167,23 @@
         }];
     }
 }
+- (void)_refreshAppointment{
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [[MTAppointmentClient sharedClient] getAppointmentsWithStoreID:[userDefaults objectForKey:@"storeid"] withSuccess:^(NSMutableArray *appointments) {
+        
+        for (MTAppointmentObject *object in appointments) {
+            
+            if ([object.read isEqualToString:@"0"]) {
+                [self.noReadImage setAlpha:1.0];
+                return ;
+            }
+        }
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
 
 #pragma mark IBAction
 
@@ -242,7 +262,7 @@
     
 }
 - (IBAction)appointmentButtonAction:(id)sender {
-    
+    [self.noReadImage setAlpha:0];
     if ([(UIButton *)sender isSelected]) {
         return;
     }

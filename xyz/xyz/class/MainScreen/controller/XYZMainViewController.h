@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *snExchangeButton;
 @property (strong, nonatomic) IBOutlet UIButton *appointmentButton;
 @property (strong, nonatomic) IBOutlet UIButton *newsButton;
+@property (weak, nonatomic) IBOutlet UIImageView *noReadImage;
 
 
 @property (strong, nonatomic) IBOutlet UIButton *pullButton;

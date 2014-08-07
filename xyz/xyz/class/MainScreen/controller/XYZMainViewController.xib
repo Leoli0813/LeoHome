@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -13,6 +13,7 @@
                 <outlet property="membersGridView" destination="VqZ-6m-c6l" id="aFj-Zu-5Y5"/>
                 <outlet property="navbarView" destination="JAj-5Q-Ghi" id="Oh2-A0-D15"/>
                 <outlet property="newsButton" destination="rOY-RO-4rT" id="kdx-UV-oM0"/>
+                <outlet property="noReadImage" destination="f5o-eI-P8L" id="e7X-41-FEm"/>
                 <outlet property="pullButton" destination="akg-9a-9dY" id="4Ri-il-1Qp"/>
                 <outlet property="rankingButton" destination="rFV-Gy-P9i" id="FgV-RM-vHW"/>
                 <outlet property="snExchangeButton" destination="yks-1s-iSd" id="YuA-jk-HwH"/>
@@ -128,6 +129,10 @@
                                 <action selector="newsButtonAction:" destination="-1" eventType="touchUpInside" id="My3-ze-cVY"/>
                             </connections>
                         </button>
+                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="common_noread.png" id="f5o-eI-P8L">
+                            <rect key="frame" x="194" y="381" width="10" height="10"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
@@ -180,5 +185,6 @@
         <image name="01_main_leftnavbar_sn_n.png" width="253" height="88"/>
         <image name="01_main_leftnavbarbg.png" width="253" height="748"/>
         <image name="01_main_pullbutton.png" width="21" height="32"/>
+        <image name="common_noread.png" width="10" height="10"/>
     </resources>
 </document>
