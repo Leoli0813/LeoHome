@@ -76,6 +76,7 @@
     XYAppointmentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil) {
         cell = [[XYAppointmentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId] ;
+        [cell.internalView.clickButton addTarget:cell action:@selector(cancelNoRead:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     [cell setObject:[self.appointmentsArray objectAtIndex:indexPath.row]];

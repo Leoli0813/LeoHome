@@ -129,7 +129,7 @@
                                 <action selector="newsButtonAction:" destination="-1" eventType="touchUpInside" id="My3-ze-cVY"/>
                             </connections>
                         </button>
-                        <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="common_noread.png" id="f5o-eI-P8L">
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="common_noread.png" id="f5o-eI-P8L">
                             <rect key="frame" x="194" y="381" width="10" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>

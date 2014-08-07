@@ -51,7 +51,7 @@
             [self.internalView.noReadImageVIew setAlpha:0];
         }];
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [[MTNewsClient sharedClient] modNewWithUserID:[userDefaults objectForKey:@"userid"]  withNewID:[NSNumber numberWithInt:sender.tag] withSuccess:^(NSString *resultStr) {
+        [[MTNewsClient sharedClient] modNewWithUserID:[userDefaults objectForKey:@"userid"]  withNewID:[NSNumber numberWithInteger:sender.tag] withSuccess:^(NSString *resultStr) {
             
         } failure:^(NSError *error) {
             

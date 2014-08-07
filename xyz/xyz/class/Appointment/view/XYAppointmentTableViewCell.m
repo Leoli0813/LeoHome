@@ -47,6 +47,7 @@
             [self.internalView.noReadImageVIew setAlpha:1.0];
         }else{
             [self.internalView.noReadImageVIew setAlpha:0];
+            [self.internalView.clickButton setAlpha:0];
         }
     
         [self.internalView.picImageView setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",OrderSystem_BASE,appointmentObject.picUrl]]];
@@ -56,11 +57,11 @@
 
 - (void)cancelNoRead:(UIButton *)sender{
     [PRPAlertView showWithTitle:@"提示" message:@"是否标识为已读?" cancelTitle:@"是" cancelBlock:^{
-        [UIView animateWithDuration:0.5 animations:^{
-            [self.internalView.noReadImageVIew setAlpha:0];
-        }];
-        [[MTAppointmentClient sharedClient] modAppointmentsWithID:[NSNumber numberWithInt:self.internalView.noReadImageVIew.tag] withLevel:[NSNumber numberWithInt:1] withSuccess:^(NSString *resultStr) {
-            
+        [[MTAppointmentClient sharedClient] modAppointmentsWithID:[NSNumber numberWithInteger:self.internalView.noReadImageVIew.tag] withLevel:[NSNumber numberWithInt:1] withSuccess:^(NSString *resultStr) {
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.internalView.noReadImageVIew setAlpha:0];
+            }];
+            [self.internalView.clickButton setAlpha:0];
         } failure:^(NSError *error) {
             
         }];

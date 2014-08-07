@@ -46,7 +46,6 @@
     
     self.membersGridView.actionDelegate = self;
     
-    
     self.members = [[NSMutableArray alloc] init];
 
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -179,6 +178,7 @@
                 return ;
             }
         }
+        [self.noReadImage setAlpha:0];
         
     } failure:^(NSError *error) {
         
@@ -188,7 +188,7 @@
 #pragma mark IBAction
 
 - (IBAction)pushdetailView:(id)sender {
-    
+    [self _refreshAppointment];
     [UIView animateWithDuration:0.5 animations:^{
         if (self.navbarView.frame.origin.x!=0) {
             [self.navbarView setFrame:CGRectMake(0, self.navbarView.frame.origin.y, self.navbarView.frame.size.width, self.navbarView.frame.size.height)];
@@ -262,7 +262,6 @@
     
 }
 - (IBAction)appointmentButtonAction:(id)sender {
-    [self.noReadImage setAlpha:0];
     if ([(UIButton *)sender isSelected]) {
         return;
     }

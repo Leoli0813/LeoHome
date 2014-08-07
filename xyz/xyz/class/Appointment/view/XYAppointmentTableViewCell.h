@@ -17,7 +17,7 @@
 
 + (CGSize)sizeForObject:(id)object;
 - (void)setObject:(id)object;
-
+- (void)cancelNoRead:(UIButton *)sender;
 @end
 
 @interface XYAppointmentInternalView : UIView
@@ -26,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet AsyncImageView *picImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *noReadImageVIew;
+@property (weak, nonatomic) IBOutlet UIButton *clickButton;
 
 @end
