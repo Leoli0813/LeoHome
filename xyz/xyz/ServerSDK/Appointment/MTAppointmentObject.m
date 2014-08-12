@@ -16,6 +16,8 @@
 
 - (id)initWithJSON:(id)JSON {
     if (self = [super init]) {
+        self.membername = [JSON stringForKey:@"styllist_name"];
+        self.memberphone = [JSON numberForKey:@"mobile"];
         self.name = [JSON stringForKey:@"name"];
         self.content = [JSON stringForKey:@"project"];
         self.date = [JSON stringForKey:@"orderdate"];

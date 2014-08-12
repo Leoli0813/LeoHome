@@ -25,8 +25,8 @@
         NSArray *nibArray = [[NSBundle mainBundle]loadNibNamed:@"XYMemberInternalView" owner:self options:nil];
         
         self.internalView = [nibArray objectAtIndex:0];
-        
         self.contentView = self.internalView;
+        
         
     }
     
@@ -50,7 +50,20 @@
         }else{
 //            [self.internalView.picImageView setImageURL:[NSURL URLWithString:item.picUrl]];
             [self.internalView.picImageView setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",OrderSystem_BASE,item.picUrl]]];
+            self.internalView.picImageView.layer.cornerRadius=10;
+            self.internalView.picImageView.layer.borderWidth = 0;
+            self.internalView.picImageView.layer.borderColor = [[UIColor blackColor] CGColor];
+            self.internalView.picImageView.layer.masksToBounds = YES;
         }
+        
+        //设置圆角
+//        zheZhaoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
+//        [zheZhaoView setBackgroundColor:[UIColor colorWithWhite:0.3f alpha:0.8f]];
+//        zheZhaoView.layer.cornerRadius = 10;//设置那个圆角的有多圆
+//        zheZhaoView.layer.borderWidth = 0;//设置边框的宽度，当然可以不要
+//        zheZhaoView.layer.borderColor = [[UIColor grayColor] CGColor];//设置边框的颜色
+//        zheZhaoView.layer.masksToBounds = YES;
+//        [self addSubview:zheZhaoView];
         
         self.internalView.nameLabel.text = item.name;
     }

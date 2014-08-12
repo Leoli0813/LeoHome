@@ -37,10 +37,9 @@
 - (void)setObject:(id)object {
     if ([object isKindOfClass:[MTAppointmentObject class]]) {
         MTAppointmentObject *appointmentObject = (MTAppointmentObject *)object;
-        self.internalView.contentTextView.text = [NSString stringWithFormat:@"项目:%@\n备注:%@",appointmentObject.content,appointmentObject.remark];;
+        self.internalView.contentTextView.text = [NSString stringWithFormat:@"项目:%@\n发型师:%@\n预约人姓名:%@\n预约人手机:%.f\n预约时间:%@\n备注:%@",appointmentObject.content,appointmentObject.membername,appointmentObject.name,appointmentObject.memberphone.floatValue,appointmentObject.date,appointmentObject.remark];
         self.internalView.nameLabel.text = appointmentObject.name;
         self.internalView.timeLabel.text = appointmentObject.date;
-        
         self.internalView.noReadImageVIew.tag = appointmentObject.appid.intValue;
         
         if ([appointmentObject.read isEqualToString:@"0"]) {

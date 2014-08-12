@@ -19,6 +19,8 @@ typedef NSMutableArray MTAppointmentsMutableArray;
 @property (nonatomic, strong) NSString *read;
 @property (nonatomic, strong) NSNumber *appid;
 @property (nonatomic, strong) NSString *remark;
+@property (nonatomic, strong) NSString *membername;
+@property (nonatomic, strong) NSNumber *memberphone;
 
 + (id)objectWithJSON:(id)JSON;
 - (id)initWithJSON:(id)JSON;

@@ -9,6 +9,8 @@
 #import "XYNewsViewController.h"
 #import "XYNewsTableViewCell.h"
 #import "MTNewsClient.h"
+#import "UIViewController+ShowLoading.h"
+#import "MTNewsClient.h"
 //#import "UITableView+SubviewAdditions.h"
 
 @interface XYNewsViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -41,6 +43,8 @@
         
     }];
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NOTIFICATIONTOREFRESHAPPINTMENT" object:nil];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -72,8 +76,41 @@
     return cell;
 }
 
-#pragma mark UITableViewDelegate
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 0;
+}
 
+#pragma mark UITableViewDelegate
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle ==UITableViewCellEditingStyleDelete) {
+        [self showLoadingText];
+        
+//        [[MTAppointmentClient sharedClient] modAppointmentsWithID:currentObject.appid withLevel:[NSNumber numberWithInt:1] withSuccess:^(NSString *resultStr) {
+//            
+//            [self hideLoadingText];
+//            
+//            [self.appointmentsArray removeObject:currentObject];
+//            
+//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+//                             withRowAnimation:UITableViewRowAnimationFade];
+//        } failure:^(NSError *error) {
+//            
+//            [self hideLoadingText];
+//            
+//            [self showAlertWithTitle:@"提示" andBody:@"网络错误"];
+//            
+//        }];
+        
+//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//        [[MTNewsClient sharedClient] modNewWithUserID:[userDefaults objectForKey:@"userid"]  withNewID:[NSNumber numberWithInteger:sender.tag] withSuccess:^(NSString *resultStr) {
+//            
+//        } failure:^(NSError *error) {
+//            
+//        }];
+    }
+    
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     

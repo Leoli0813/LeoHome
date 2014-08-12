@@ -41,6 +41,7 @@
         
         if (item.flag) {
             [self.internalView.noReadImageVIew setAlpha:0];
+            [self.internalView.clickButton setAlpha:0];
         }
     }
 }

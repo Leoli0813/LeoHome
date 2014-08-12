@@ -14,7 +14,6 @@
 //登陆
 #define OrderSystem_BASE_URL [NSString stringWithFormat:@"%@/signIn.do",OrderSystem_BASE]
 
-
 #define OrderSystem_UPLOAD_IMAGE [NSString stringWithFormat:@"%@/uploadimg.do",OrderSystem_BASE]
 
 //发型师列表

@@ -51,8 +51,23 @@
         self.nameTextField.text = self.memberObject.name;
 //        [self.internalView.picImageView setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",OrderSystem_BASE,self.memberObject.picUrl]];
         [self.picImage setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",OrderSystem_BASE,self.memberObject.picUrl]]];
-        [self.memberPicImageView setImageURL:[NSURL URLWithString:self.memberObject.picUrl]];
-        [self.housePicImageView setImageURL:[NSURL URLWithString:self.memberObject.picUrl]];//houseUrl
+        
+        self.picImage.layer.cornerRadius=10;
+        self.picImage.layer.borderWidth = 0;
+        self.picImage.layer.borderColor = [[UIColor blackColor] CGColor];
+        self.picImage.layer.masksToBounds = YES;
+        
+        self.memberPicImageView.layer.cornerRadius=10;
+        self.memberPicImageView.layer.borderWidth = 0;
+        self.memberPicImageView.layer.borderColor = [[UIColor blackColor] CGColor];
+        self.memberPicImageView.layer.masksToBounds = YES;
+        
+        self.housePicImageView.layer.cornerRadius=10;
+        self.housePicImageView.layer.borderWidth = 0;
+        self.housePicImageView.layer.borderColor = [[UIColor blackColor] CGColor];
+        self.housePicImageView.layer.masksToBounds = YES;
+//        [self.memberPicImageView setImageURL:[NSURL URLWithString:self.memberObject.picUrl]];
+//        [self.housePicImageView setImageURL:[NSURL URLWithString:self.memberObject.picUrl]];//houseUrl
 
 //        [self.picImage setImageURL:[NSURL URLWithString:self.memberObject.picUrl]];
 //        [self.memberPicImageView setImageURL:[NSURL URLWithString:self.memberObject.picUrl]];
@@ -156,7 +171,7 @@
         
         UIView *view = [self.viewsArray objectAtIndex:1];
         
-        [view setFrame:CGRectMake(47, 278, view.frame.size.width, view.frame.size.height)];
+//        [view setFrame:CGRectMake(47, 278, view.frame.size.width, view.frame.size.height)];
         
         [self _viewAddSubView:view];
     } failure:^(NSError *error) {

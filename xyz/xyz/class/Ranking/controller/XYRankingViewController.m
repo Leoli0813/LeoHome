@@ -63,6 +63,8 @@
     } failure:^(NSError *error) {
         
     }];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NOTIFICATIONTOREFRESHAPPINTMENT" object:nil];
 }
 
 - (void)didReceiveMemoryWarning

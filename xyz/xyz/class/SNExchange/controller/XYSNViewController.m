@@ -29,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NOTIFICATIONTOREFRESHAPPINTMENT" object:nil];
     // Do any additional setup after loading the view from its nib.
     
 //    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handleNotification:) name:UIKeyboardWillShowNotification object:nil];

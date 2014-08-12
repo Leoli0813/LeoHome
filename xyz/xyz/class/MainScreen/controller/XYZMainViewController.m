@@ -67,6 +67,7 @@
     }];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handleNotification:) name:@"NOTIFICATIONTOREFRESH" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handleNotification:) name:@"NOTIFICATIONTOREFRESHAPPINTMENT" object:nil];
     
     [self _refreshAppointment];
     
@@ -164,6 +165,9 @@
         } failure:^(NSError *error) {
             
         }];
+    }
+    if ([not.name isEqualToString:@"NOTIFICATIONTOREFRESHAPPINTMENT"]) {
+        [self _refreshAppointment];
     }
 }
 - (void)_refreshAppointment{

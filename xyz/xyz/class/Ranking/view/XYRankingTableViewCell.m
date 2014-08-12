@@ -49,7 +49,7 @@
 //        [self.internalView.picImageView setImageURL:[NSURL URLWithString:rankingObject.picUrl]];
         double moveleft = 0;
         
-        double point = rankingObject.point.doubleValue * 2 ;
+        double point = rankingObject.point.doubleValue;
         
         moveleft = 140 - 14*point + (5-(ceil(point/2))) * 11;
         

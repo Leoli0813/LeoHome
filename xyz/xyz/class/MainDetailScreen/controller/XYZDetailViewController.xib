@@ -12,9 +12,9 @@
                 <outlet property="condLabel" destination="lMD-C0-xlg" id="bEX-22-EsG"/>
                 <outlet property="conditionsButtonsView" destination="tbX-HU-nMd" id="wtZ-wW-fKQ"/>
                 <outlet property="detailView" destination="wK3-9p-fKH" id="Xwz-ua-T9T"/>
-                <outlet property="housePicImageView" destination="G3U-Yu-pme" id="8rz-rZ-u5V"/>
+                <outlet property="housePicImageView" destination="G3U-Yu-pme" id="0kN-Cg-Ccd"/>
                 <outlet property="inputPhoneTextField" destination="y3B-Xh-Izv" id="FWB-Ki-iST"/>
-                <outlet property="memberPicImageView" destination="Whd-2e-PAj" id="8ls-UU-nyz"/>
+                <outlet property="memberPicImageView" destination="Whd-2e-PAj" id="H75-YE-xLG"/>
                 <outlet property="nameTextField" destination="PSY-G4-koa" id="2ZF-c4-AJt"/>
                 <outlet property="picImage" destination="U6X-EJ-dQU" id="cgK-Ly-LEK"/>
                 <outlet property="scoreLabel" destination="zUR-7N-Gsd" id="ZKm-5u-szE"/>
@@ -43,7 +43,7 @@
                             <rect key="frame" x="178" y="14" width="185" height="185"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="U6X-EJ-dQU" customClass="AsyncImageView">
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="U6X-EJ-dQU" customClass="AsyncImageView">
                             <rect key="frame" x="193" y="28" width="155" height="157"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
@@ -112,12 +112,12 @@
                                         <action selector="submitAppraiseButtonAction:" destination="-1" eventType="touchUpInside" id="uFy-Ze-u8p"/>
                                     </connections>
                                 </button>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Whd-2e-PAj" userLabel="MemberPicImage" customClass="AsyncImageView">
-                                    <rect key="frame" x="70" y="36" width="63" height="63"/>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="02_detail_member.png" id="Whd-2e-PAj" userLabel="MemberPicImage" customClass="AsyncImageView">
+                                    <rect key="frame" x="70" y="27" width="78" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </imageView>
-                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="G3U-Yu-pme" userLabel="HousePicImage" customClass="AsyncImageView">
-                                    <rect key="frame" x="70" y="137" width="63" height="63"/>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="02_detail_house.png" id="G3U-Yu-pme" userLabel="HousePicImage" customClass="AsyncImageView">
+                                    <rect key="frame" x="70" y="130" width="78" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" id="g44-XK-tNP" userLabel="TechnologyAllButtonsView">
@@ -361,85 +361,75 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
-        <view contentMode="scaleToFill" id="2wo-Lt-4bG">
-            <rect key="frame" x="0.0" y="0.0" width="561" height="213"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ayf-MV-Q84">
+            <rect key="frame" x="0.0" y="0.0" width="655" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="04_appraisal_okbg.png" id="6f5-rW-tye">
-                    <rect key="frame" x="0.0" y="0.0" width="561" height="213"/>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="02_detail_bg.png" id="d5i-8P-Dqh">
+                    <rect key="frame" x="0.0" y="0.0" width="655" height="768"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="感谢你的评价，本次积分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dbl-Wh-aSM">
-                    <rect key="frame" x="150" y="38" width="187" height="21"/>
+                <view contentMode="scaleToFill" id="2wo-Lt-4bG">
+                    <rect key="frame" x="47" y="278" width="561" height="213"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zUR-7N-Gsd">
-                    <rect key="frame" x="346" y="38" width="77" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.67843137254901964" green="0.40784313725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="izT-y1-CpL">
-                    <rect key="frame" x="34" y="100" width="77" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="y3B-Xh-Izv">
-                    <rect key="frame" x="139" y="91" width="238" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dyv-Mh-Vdm">
-                    <rect key="frame" x="433" y="91" width="87" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="04_appraisal_ok_n.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted" backgroundImage="04_appraisal_ok_h.png"/>
-                    <connections>
-                        <action selector="finishedButtonAction:" destination="-1" eventType="touchUpInside" id="xe4-ML-d5N"/>
-                    </connections>
-                </button>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="04_appraisal_okbg.png" id="6f5-rW-tye">
+                            <rect key="frame" x="0.0" y="0.0" width="561" height="213"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="感谢你的评价，本次积分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dbl-Wh-aSM">
+                            <rect key="frame" x="150" y="38" width="187" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zUR-7N-Gsd">
+                            <rect key="frame" x="346" y="38" width="77" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.67843137254901964" green="0.40784313725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="izT-y1-CpL">
+                            <rect key="frame" x="34" y="100" width="77" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="y3B-Xh-Izv">
+                            <rect key="frame" x="139" y="91" width="238" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dyv-Mh-Vdm">
+                            <rect key="frame" x="433" y="91" width="87" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="04_appraisal_ok_n.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="04_appraisal_ok_h.png"/>
+                            <connections>
+                                <action selector="finishedButtonAction:" destination="-1" eventType="touchUpInside" id="xe4-ML-d5N"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
-        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="02_detail_line.png" id="B81-ed-7Xg">
-            <rect key="frame" x="0.0" y="0.0" width="255" height="1"/>
-            <autoresizingMask key="autoresizingMask"/>
-        </imageView>
-        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nhf-F4-bdw" userLabel="AppraiseButton">
-            <rect key="frame" x="0.0" y="0.0" width="125" height="43"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <state key="normal" backgroundImage="02_detail_appraise_n.png">
-                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-            </state>
-            <state key="highlighted" backgroundImage="02_detail_appraise_h.png"/>
-            <connections>
-                <action selector="appraiseButtonAction:" destination="-1" eventType="touchUpInside" id="dTa-NK-BbV"/>
-            </connections>
-        </button>
-        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ijt-W0-pGg">
-            <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" type="system" pointSize="26"/>
-            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-            <nil key="highlightedColor"/>
-        </label>
     </objects>
     <resources>
-        <image name="02_detail_appraise_h.png" width="125" height="43"/>
-        <image name="02_detail_appraise_n.png" width="125" height="43"/>
         <image name="02_detail_bg.png" width="655" height="748"/>
+        <image name="02_detail_house.png" width="88" height="88"/>
         <image name="02_detail_imagebg.png" width="160" height="160"/>
-        <image name="02_detail_line.png" width="255" height="1"/>
+        <image name="02_detail_member.png" width="88" height="88"/>
         <image name="04_ appraisal_allwhitestar.png" width="180" height="26"/>
         <image name="04_appraisal_line.png" width="455" height="1"/>
         <image name="04_appraisal_ok_h.png" width="87" height="40"/>

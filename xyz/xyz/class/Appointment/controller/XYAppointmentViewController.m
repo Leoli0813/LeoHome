@@ -98,14 +98,14 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([self.appointmentsArray count]) {
-        MTAppointmentObject *currentObject =[self.appointmentsArray objectAtIndex:0];
-        if (currentObject.read.intValue==2) {
-            return 0;
-        }
-        return 1;
-    }
-    return 0;
+//    if ([self.appointmentsArray count]) {
+//        MTAppointmentObject *currentObject =[self.appointmentsArray objectAtIndex:0];
+//        if (currentObject.read.intValue==2) {
+//            return 0;
+//        }
+//        return 1;
+//    }
+    return 1;
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{//请求数据源提交的插入或删除指定行接收者。
@@ -173,16 +173,41 @@
                 [self showAlertWithTitle:@"提示" andBody:@"网络错误"];
                 
             }];
+        }else if (currentObject.read.intValue==2){
+            
+            [self showLoadingText];
+            
+            [[MTAppointmentClient sharedClient] modAppointmentsWithID:currentObject.appid withLevel:[NSNumber numberWithInt:3] withSuccess:^(NSString *resultStr) {
+                
+                [self hideLoadingText];
+                
+                [self.appointmentsArray removeObject:currentObject];
+                
+                [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                                 withRowAnimation:UITableViewRowAnimationFade];
+            } failure:^(NSError *error) {
+                
+                [self hideLoadingText];
+                
+                [self showAlertWithTitle:@"提示" andBody:@"网络错误"];
+                
+            }];
         }
         
     }
 }
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MTAppointmentObject *currentObject =[self.appointmentsArray objectAtIndex:0];
+    if (currentObject.read.intValue==2) {
+        return @"删除已处理信息";
+    }
+
     return @"标识为已处理";
 }
 
 #pragma mark IBAction
 - (IBAction)menuButton:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NOTIFICATIONTOREFRESHAPPINTMENT" object:nil];
     if (self.menuView.alpha==0) {
         [UIView animateWithDuration:0.3 animations:^{
             self.menuView.alpha=1;

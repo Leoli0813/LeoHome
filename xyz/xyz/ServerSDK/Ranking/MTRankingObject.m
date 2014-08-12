@@ -18,7 +18,7 @@
 - (id)initWithJSON:(id)JSON {
     if (self = [super init]) {
         self.picUrl = [JSON stringForKey:@"url"];
-        self.point = [[JSON numberForKey:@"skill"] stringValue];
+        self.point = [[JSON numberForKey:@"score"] stringValue];
         self.name = [JSON stringForKey:@"name"];
         
     }
