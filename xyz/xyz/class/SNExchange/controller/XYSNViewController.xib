@@ -59,6 +59,16 @@
                     <rect key="frame" x="240" y="362" width="197" height="141"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VKZ-HS-OkR">
+                    <rect key="frame" x="603" y="14" width="32" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="06_appointment_menu.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="historylistButtonAction:" destination="-1" eventType="touchUpInside" id="f3z-IK-Sam"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -71,5 +81,6 @@
         <image name="05_snkey_submit_h.png" width="130" height="50"/>
         <image name="05_snkey_submit_n.png" width="130" height="50"/>
         <image name="05_snkey_success.png" width="197" height="141"/>
+        <image name="06_appointment_menu.png" width="19" height="26"/>
     </resources>
 </document>

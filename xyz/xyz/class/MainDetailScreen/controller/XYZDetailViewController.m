@@ -85,6 +85,7 @@
         self.scoreLabel.text = @"0.00";
     }
     
+    [self.scoreWillGetLabel setText:@"0"];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handleNotification:) name:@"NOTIFICATIONTOSHOW" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handleNotification:) name:@"NOTIFICATIONTOSTOP" object:nil];
 }
@@ -161,11 +162,11 @@
 - (IBAction)submitAppraiseButtonAction:(id)sender {
     
 //    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    MTAppraiseObject *currentObject = [[MTAppraiseObject alloc] initWithStyllistID:self.memberObject.itemid  withStoreID:self.memberObject.storeid withEnvironment:self.conditionsPoint withService:self.servicePoint withSkill:self.technologyPoint withRemarks:self.memberObject.remark];
+    MTAppraiseObject *currentObject = [[MTAppraiseObject alloc] initWithStyllistID:self.memberObject.itemid  withStoreID:self.memberObject.storeid withEnvironment:self.conditionsPoint withService:self.servicePoint withSkill:self.technologyPoint withConsume:self.consumeTextField.text withRemarks:self.memberObject.remark];
     
     [[MTAppraiseClient sharedClient] modAppraiseWithObject:currentObject withSuccess:^(MTAppraiseResultObject *resultObject) {
         
-        self.scoreLabel.text = resultObject.score.stringValue;
+        self.scoreWillGetLabel.text = resultObject.score.stringValue;
         
         [self.detailView setAlpha:0];
         
@@ -255,6 +256,35 @@
     
 }
 
+- (IBAction)fixDetailButtonAction:(UIButton *)sender {
+    if (!sender.isSelected) {
+        [sender setBackgroundImage:[UIImage imageNamed:@"02_detail_save_h"] forState:UIControlStateHighlighted];
+        [self.phoneTextField setEnabled:YES];
+        [self.idTextField setEnabled:YES];
+        [self.phoneTextField setBorderStyle:UITextBorderStyleRoundedRect];
+        [self.idTextField setBorderStyle:UITextBorderStyleRoundedRect];
+        [sender setSelected:YES];
+    }else{
+        [sender setBackgroundImage:[UIImage imageNamed:@"02_detail_fix_h"] forState:UIControlStateHighlighted];
+        
+        self.memberObject.mobile = self.phoneTextField.text;
+        self.memberObject.creditID = self.idTextField.text;
+        
+        [[MTMemberClient sharedClient] modMemberWithObject:self.memberObject withSuccess:^(NSString *resultStr) {
+            
+        } failure:^(NSError *error) {
+            
+        }];
+        
+        [self.phoneTextField setEnabled:NO];
+        [self.idTextField setEnabled:NO];
+        
+        [self.phoneTextField setBorderStyle:UITextBorderStyleNone];
+        [self.idTextField setBorderStyle:UITextBorderStyleNone];
+        
+        [sender setSelected:NO];
+    }
+}
 #pragma mark UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker
         didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo

@@ -27,11 +27,18 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *inputPhoneTextField;
 @property (strong, nonatomic) IBOutlet UIView *detailView;
+@property (weak, nonatomic) IBOutlet UILabel *scoreWillGetLabel;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @property (strong, nonatomic) IBOutlet UILabel *techLabel;
 @property (strong, nonatomic) IBOutlet UILabel *serviceLabel;
 @property (strong, nonatomic) IBOutlet UILabel *condLabel;
 @property (strong, nonatomic) IBOutlet UIButton *uploadButton;
+
+@property (weak, nonatomic) IBOutlet UITextField *idTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UIButton *fixButton;
+@property (weak, nonatomic) IBOutlet UITextField *consumeTextField;
+
 
 @end

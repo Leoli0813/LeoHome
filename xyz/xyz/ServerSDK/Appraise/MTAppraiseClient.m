@@ -29,7 +29,7 @@
     
     // 2. create params.
     
-    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:appraise.styllistID,@"styllistid",appraise.storeID,@"storeid",appraise.environment,@"environment",appraise.service,@"service",appraise.skill,@"skill",appraise.remarks,@"remarks",nil];
+    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:appraise.styllistID,@"styllistid",appraise.storeID,@"storeid",appraise.environment,@"environment",appraise.service,@"service",appraise.skill,@"skill",appraise.consume,@"consume",appraise.remarks,@"remarks",nil];
     
     // 3. load from server.
     [self.client postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {

@@ -51,7 +51,7 @@
     
     // 2. create params.
 //    memberOject.storeid,@"storeid",
-    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:memberOject.itemid,@"id",memberOject.name,@"name",memberOject.mobile,@"mobile",memberOject.remark,@"remark",nil];
+    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:memberOject.itemid,@"id",memberOject.name,@"name",memberOject.mobile,@"mobile",memberOject.creditID,@"creditID",memberOject.remark,@"remark",nil];
     
     // 3. load from server.
     [self.client postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {

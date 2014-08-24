@@ -11,17 +11,18 @@
 
 @implementation MTAppraiseObject
 
-+ (id)objectWithStyllistID:(NSNumber *)styllistid withStoreID:(NSNumber *)storeid withEnvironment:(NSNumber *)environment withService:(NSNumber *)service withSkill:(NSNumber *)skill withRemarks:(NSString *)remarks{
-    return [[self alloc] initWithStyllistID:styllistid withStoreID:storeid withEnvironment:environment withService:service withSkill:skill withRemarks:remarks];
++ (id)objectWithStyllistID:(NSNumber *)styllistid withStoreID:(NSNumber *)storeid withEnvironment:(NSNumber *)environment withService:(NSNumber *)service withSkill:(NSNumber *)skill withConsume:(NSString *)consume withRemarks:(NSString *)remarks{
+    return [[self alloc] initWithStyllistID:styllistid withStoreID:storeid withEnvironment:environment withService:service withSkill:skill withConsume:consume withRemarks:remarks];
 }
 
-- (id)initWithStyllistID:(NSNumber *)styllistid withStoreID:(NSNumber *)storeid withEnvironment:(NSNumber *)environment withService:(NSNumber *)service withSkill:(NSNumber *)skill withRemarks:(NSString *)remarks{
+- (id)initWithStyllistID:(NSNumber *)styllistid withStoreID:(NSNumber *)storeid withEnvironment:(NSNumber *)environment withService:(NSNumber *)service withSkill:(NSNumber *)skill withConsume:(NSString *)consume withRemarks:(NSString *)remarks{
     if (self = [super init]) {
         self.styllistID = styllistid;
         self.storeID = storeid;
         self.environment = environment;
         self.service = service;
         self.skill = skill;
+        self.consume = consume;
         self.remarks = remarks;
     }
     return self;

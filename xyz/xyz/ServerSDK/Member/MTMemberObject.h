@@ -20,6 +20,7 @@ typedef NSMutableArray MTMembersMutableArray;
 @property (nonatomic, strong) NSString *picUrl;
 @property (nonatomic, strong) NSString *mobile;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *creditID;
 
 + (id)objectWithJSON:(id)JSON;
 - (id)initWithJSON:(id)JSON;

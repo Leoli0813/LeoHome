@@ -16,10 +16,12 @@
 @property (nonatomic, strong) NSNumber *service;
 @property (nonatomic, strong) NSNumber *skill;
 @property (nonatomic, strong) NSString *remarks;
+@property (nonatomic, strong) NSString *consume;
 
-+ (id)objectWithStyllistID:(NSNumber *)styllistid withStoreID:(NSNumber *)storeid withEnvironment:(NSNumber *)environment withService:(NSNumber *)service withSkill:(NSNumber *)skill withRemarks:(NSString *)remarks;
 
-- (id)initWithStyllistID:(NSNumber *)styllistid withStoreID:(NSNumber *)storeid withEnvironment:(NSNumber *)environment withService:(NSNumber *)service withSkill:(NSNumber *)skill withRemarks:(NSString *)remarks;
++ (id)objectWithStyllistID:(NSNumber *)styllistid withStoreID:(NSNumber *)storeid withEnvironment:(NSNumber *)environment withService:(NSNumber *)service withSkill:(NSNumber *)skill withConsume:(NSString *)consume withRemarks:(NSString *)remarks;
+
+- (id)initWithStyllistID:(NSNumber *)styllistid withStoreID:(NSNumber *)storeid withEnvironment:(NSNumber *)environment withService:(NSNumber *)service withSkill:(NSNumber *)skill withConsume:(NSString *)consume withRemarks:(NSString *)remarks;
 
 @end
 

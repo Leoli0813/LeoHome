@@ -25,6 +25,7 @@
         self.picUrl = [JSON stringForKey:@"url"];
         self.mobile = [JSON stringForKey:@"mobile"];
         self.name = [JSON stringForKey:@"name"];
+        self.creditID = [JSON stringForKey:@"creditID"];
     }
     
     return self;

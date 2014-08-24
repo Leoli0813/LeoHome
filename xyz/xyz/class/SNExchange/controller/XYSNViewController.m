@@ -92,5 +92,7 @@
     [self.backgroundButton setAlpha:0];
     [self.messageImageView setAlpha:0];
 }
+- (IBAction)historylistButtonAction:(id)sender {
+}
 
 @end
