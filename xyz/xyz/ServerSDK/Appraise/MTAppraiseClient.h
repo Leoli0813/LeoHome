@@ -13,7 +13,7 @@
 
 - (void)modAppraiseWithObject:(MTAppraiseObject*)appraise withSuccess:(void(^)(MTAppraiseResultObject *resultObject))success failure:(void(^)(NSError *error))failure;
 
-- (void)getPointWithPhone:(NSNumber *)phone WithStoreID:(NSString *)storeID withSuccess:(void(^)(NSString *resultStr))success failure:(void(^)(NSError *error))failure;
+- (void)getPointWithPhone:(NSNumber *)phone WithStoreID:(NSString *)storeID withAmmout:(NSString *)ammount withSuccess:(void(^)(NSString *resultStr))success failure:(void(^)(NSError *error))failure;
 
 
 @end

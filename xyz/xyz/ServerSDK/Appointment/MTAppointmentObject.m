@@ -21,7 +21,7 @@
         self.name = [JSON stringForKey:@"name"];
         self.content = [JSON stringForKey:@"project"];
         self.date = [JSON stringForKey:@"orderdate"];
-        self.picUrl = [JSON stringForKey:@"picUrl"];
+        self.picUrl = [JSON stringForKey:@"url"];
         self.remark = [JSON stringForKey:@"remark"];
         self.read = [[JSON numberForKey:@"read"] stringValue];
         self.appid = [JSON numberForKey:@"id"] ;

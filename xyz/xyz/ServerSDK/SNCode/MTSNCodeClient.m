@@ -22,13 +22,13 @@
 	return shared_instance;
 }
 
-- (void)modSNCodeWithString:(NSString *)snCode withSuccess:(void(^)(NSString *resultStr))success failure:(void(^)(NSError *error))failure{
+- (void)modSNCodeWithString:(NSString *)snCode withStoreID:(NSString *)storeid withSuccess:(void(^)(NSString *resultStr))success failure:(void(^)(NSError *error))failure{
     // 1. get full path.
     NSString *path = [MTDataAPIClient getFullPathFromPath:OrderSystem_SNCODE];
     
     // 2. create params.
     
-    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:snCode,@"sncode",nil];
+    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:snCode,@"sncode",storeid,@"storeid",nil];
     
     // 3. load from server.
     [self.client postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -41,6 +41,22 @@
         NSDictionary *resultDic = [NSDictionary dictionaryWithDictionary:((AFJSONRequestOperation *)operation).responseJSON];
         
         success([resultDic objectForKey:@"statu"]);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(error);
+    }];
+}
+- (void)getExchangeWithStoreID:(NSString *)storeid withSuccess:(void(^)(MTExchangesMutableArray *result))success failure:(void(^)(NSError *error))failure{
+    NSString *path = [MTDataAPIClient getFullPathFromPath:OrderSystem_EXCHANGE];
+    
+    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:storeid,@"storeid",nil];
+    
+    [self.client postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        MTExchangeObjectResultObject *responseData =[MTExchangeObjectResultObject objectWithJSON:((AFJSONRequestOperation *)operation).responseJSON];
+        
+        // 3.2 Check return code and return.
+        success(responseData.exchanges);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(error);

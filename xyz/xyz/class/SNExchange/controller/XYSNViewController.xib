@@ -9,6 +9,8 @@
             <connections>
                 <outlet property="SNCodeTextField" destination="ylr-qn-4MU" id="dVU-WX-6a9"/>
                 <outlet property="backgroundButton" destination="grD-aa-ubp" id="4F6-iM-RnN"/>
+                <outlet property="historyTableView" destination="OZi-H6-WUO" id="na0-wn-EkG"/>
+                <outlet property="historyView" destination="5UG-sM-4I4" id="uxa-4C-KWO"/>
                 <outlet property="messageImageView" destination="6g2-xC-C6c" id="hcZ-YM-Zrc"/>
                 <outlet property="view" destination="0Ga-BQ-mLl" id="tcG-4k-N6K"/>
             </connections>
@@ -69,6 +71,41 @@
                         <action selector="historylistButtonAction:" destination="-1" eventType="touchUpInside" id="f3z-IK-Sam"/>
                     </connections>
                 </button>
+                <view alpha="0.0" contentMode="scaleToFill" id="5UG-sM-4I4" userLabel="HistoryView">
+                    <rect key="frame" x="43" y="105" width="576" height="558"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="01_main_cellbg.png" id="ujt-j5-F0p">
+                            <rect key="frame" x="0.0" y="0.0" width="576" height="558"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OZi-H6-WUO">
+                            <rect key="frame" x="16" y="54" width="544" height="484"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="fB3-eh-moP"/>
+                                <outlet property="delegate" destination="-1" id="doK-7L-MQ8"/>
+                            </connections>
+                        </tableView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兑换记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mi1-mz-Rtw">
+                            <rect key="frame" x="226" y="11" width="124" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rTC-dH-cCk">
+                            <rect key="frame" x="25" y="10" width="44" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="05_snkey_back.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backExchangeButtonAction:" destination="-1" eventType="touchUpInside" id="gdI-I1-VWY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -76,6 +113,8 @@
         </view>
     </objects>
     <resources>
+        <image name="01_main_cellbg.png" width="238" height="238"/>
+        <image name="05_snkey_back.png" width="15" height="28"/>
         <image name="05_snkey_bg.png" width="655" height="748"/>
         <image name="05_snkey_inputbg.png" width="300" height="50"/>
         <image name="05_snkey_submit_h.png" width="130" height="50"/>

@@ -10,8 +10,12 @@
 #import "UIViewController+ShowAlertBox.h"
 #import "MTSNCodeClient.h"
 #import "UIViewController+ShowLoading.h"
+#import "XYExchangeTableViewCell.h"
 
-@interface XYSNViewController ()
+
+@interface XYSNViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) MTExchangesMutableArray *exchangesArray;
 
 @end
 
@@ -28,13 +32,13 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"NOTIFICATIONTOREFRESHAPPINTMENT" object:nil];
-    // Do any additional setup after loading the view from its nib.
     
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handleNotification:) name:UIKeyboardWillShowNotification object:nil];
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handleNotification:) name:UIKeyboardWillHideNotification object:nil];
+    [super viewDidLoad];
+    
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +70,8 @@
     
     [self showLoadingText:@"请稍候......"];
     
-    [[MTSNCodeClient sharedClient] modSNCodeWithString:self.SNCodeTextField.text withSuccess:^(NSString *resultStr) {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [[MTSNCodeClient sharedClient] modSNCodeWithString:self.SNCodeTextField.text withStoreID:[userDefaults objectForKey:@"storeid"] withSuccess:^(NSString *resultStr) {
         [self hideLoadingText];
         if ([resultStr isEqualToString:@"SUCCESS"]) {
             [self.messageImageView setImage:[UIImage imageNamed:@"05_snkey_success"]];
@@ -93,6 +98,60 @@
     [self.messageImageView setAlpha:0];
 }
 - (IBAction)historylistButtonAction:(id)sender {
+    [self showLoadingText:@"正在查询......"];
+    
+    [self.historyView setFrame:CGRectMake(43+100, 105, 576, 558)];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [[MTSNCodeClient sharedClient] getExchangeWithStoreID:[userDefaults objectForKey:@"storeid"] withSuccess:^(MTExchangesMutableArray *result) {
+        [self hideLoadingText];
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.historyView setAlpha:1.0];
+            [self.historyView setFrame:CGRectMake(43, 105, 576, 558)];
+        }];
+        //43,105,576,558
+        self.exchangesArray = result;
+        [self.historyTableView reloadData];
+    } failure:^(NSError *error) {
+        
+        [self hideLoadingText];
+        
+        [self showAlertWithTitle:@"提示" andBody:@"查询失败"];
+    }];
 }
+- (IBAction)backExchangeButtonAction:(id)sender {
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.historyView setAlpha:0];
+        [self.historyView setFrame:CGRectMake(43-100, 105, 576, 558)];
+    }];
+}
+#pragma mark - UITableViewDataSource
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.exchangesArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellTableIdentifier = @"cellID";
+    
+    XYExchangeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[XYExchangeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTableIdentifier] ;
+    }
+    
+    [cell setObject:[self.exchangesArray objectAtIndex:indexPath.row]];
+    
+    return cell;
+}
+
+#pragma mark UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+	return [XYExchangeTableViewCell sizeForObject:nil].height;
+}
+
 
 @end

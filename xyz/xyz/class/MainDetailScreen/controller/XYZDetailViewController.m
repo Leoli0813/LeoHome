@@ -75,6 +75,9 @@
 
         self.scoreLabel.text = [NSString stringWithFormat:@"%.1f",self.memberObject.technicalPoint.floatValue];
         
+        self.idTextField.text = self.memberObject.creditID;
+        self.phoneTextField.text = self.memberObject.mobile;
+        
         
     }else{
         [self.changeIMGButton setAlpha:0];
@@ -213,7 +216,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     NSString *phonestr = [NSString stringWithFormat:@"%@",self.inputPhoneTextField.text];
-    [[MTAppraiseClient sharedClient] getPointWithPhone:[NSNumber numberWithDouble:phonestr.doubleValue]    WithStoreID:[userDefaults objectForKey:@"storeid"] withSuccess:^(NSString *resultStr) {
+    [[MTAppraiseClient sharedClient] getPointWithPhone:[NSNumber numberWithDouble:phonestr.doubleValue] WithStoreID:[userDefaults objectForKey:@"storeid"] withAmmout:self.consumeTextField.text withSuccess:^(NSString *resultStr) {
     
         [self showAlertWithTitle:@"提示" andBody:@"提交成功"];
         

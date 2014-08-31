@@ -211,6 +211,11 @@
 		809F08A719A8DD92005D257A /* 02_detail_save_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809F089D19A8DD92005D257A /* 02_detail_save_n@2x.png */; };
 		809F08AA19A8DDBA005D257A /* 06_appointment_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 809F08A819A8DDBA005D257A /* 06_appointment_menu.png */; };
 		809F08AB19A8DDBA005D257A /* 06_appointment_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809F08A919A8DDBA005D257A /* 06_appointment_menu@2x.png */; };
+		809F08AE19ADFD6E005D257A /* MTExchangeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 809F08AD19ADFD6E005D257A /* MTExchangeObject.m */; };
+		809F08B219AE0E1A005D257A /* XYExchangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 809F08B019AE0E1A005D257A /* XYExchangeTableViewCell.m */; };
+		809F08B519AE1558005D257A /* XYExchangeInternalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 809F08B419AE1558005D257A /* XYExchangeInternalView.xib */; };
+		809F08B819AE1C02005D257A /* 05_snkey_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 809F08B619AE1C02005D257A /* 05_snkey_back.png */; };
+		809F08B919AE1C02005D257A /* 05_snkey_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 809F08B719AE1C02005D257A /* 05_snkey_back@2x.png */; };
 		80D40FB8199619270091F078 /* 02_detail_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D40FB6199619270091F078 /* 02_detail_house.png */; };
 		80D40FB9199619270091F078 /* 02_detail_member.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D40FB7199619270091F078 /* 02_detail_member.png */; };
 /* End PBXBuildFile section */
@@ -486,6 +491,13 @@
 		809F089D19A8DD92005D257A /* 02_detail_save_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02_detail_save_n@2x.png"; sourceTree = "<group>"; };
 		809F08A819A8DDBA005D257A /* 06_appointment_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06_appointment_menu.png; sourceTree = "<group>"; };
 		809F08A919A8DDBA005D257A /* 06_appointment_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06_appointment_menu@2x.png"; sourceTree = "<group>"; };
+		809F08AC19ADFD6E005D257A /* MTExchangeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTExchangeObject.h; sourceTree = "<group>"; };
+		809F08AD19ADFD6E005D257A /* MTExchangeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTExchangeObject.m; sourceTree = "<group>"; };
+		809F08AF19AE0E1A005D257A /* XYExchangeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYExchangeTableViewCell.h; path = xyz/class/SNExchange/controller/XYExchangeTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		809F08B019AE0E1A005D257A /* XYExchangeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYExchangeTableViewCell.m; path = xyz/class/SNExchange/controller/XYExchangeTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		809F08B419AE1558005D257A /* XYExchangeInternalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XYExchangeInternalView.xib; path = xyz/class/SNExchange/controller/XYExchangeInternalView.xib; sourceTree = SOURCE_ROOT; };
+		809F08B619AE1C02005D257A /* 05_snkey_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 05_snkey_back.png; sourceTree = "<group>"; };
+		809F08B719AE1C02005D257A /* 05_snkey_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05_snkey_back@2x.png"; sourceTree = "<group>"; };
 		80D40FB6199619270091F078 /* 02_detail_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02_detail_house.png; sourceTree = "<group>"; };
 		80D40FB7199619270091F078 /* 02_detail_member.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02_detail_member.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -865,6 +877,9 @@
 		042880B3192FB93C00098767 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				809F08AF19AE0E1A005D257A /* XYExchangeTableViewCell.h */,
+				809F08B019AE0E1A005D257A /* XYExchangeTableViewCell.m */,
+				809F08B419AE1558005D257A /* XYExchangeInternalView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -977,6 +992,8 @@
 			children = (
 				800C8FF81962ECDF00894310 /* MTSNCodeClient.h */,
 				800C8FF91962ECDF00894310 /* MTSNCodeClient.m */,
+				809F08AC19ADFD6E005D257A /* MTExchangeObject.h */,
+				809F08AD19ADFD6E005D257A /* MTExchangeObject.m */,
 			);
 			path = SNCode;
 			sourceTree = "<group>";
@@ -1132,6 +1149,8 @@
 		04B35B97194BED6F00907863 /* 05_snkey */ = {
 			isa = PBXGroup;
 			children = (
+				809F08B619AE1C02005D257A /* 05_snkey_back.png */,
+				809F08B719AE1C02005D257A /* 05_snkey_back@2x.png */,
 				04B35B98194BED6F00907863 /* 05_snkey_bg.png */,
 				04B35B99194BED6F00907863 /* 05_snkey_bg@2x.png */,
 				04B35B9A194BED6F00907863 /* 05_snkey_failure.png */,
@@ -1378,6 +1397,7 @@
 				04B35BEB194BED6F00907863 /* 02_detail_smallimagebg@2x.png in Resources */,
 				04B35BE2194BED6F00907863 /* 02_detail_appraise_n.png in Resources */,
 				042880CA192FC0C000098767 /* XYAppointmentInternalView.xib in Resources */,
+				809F08B819AE1C02005D257A /* 05_snkey_back.png in Resources */,
 				04B35BF7194BED6F00907863 /* 03_ranking_othercellbg@2x.png in Resources */,
 				8020B00D198E61BD0082306A /* 06_appointment_more.png in Resources */,
 				04B35C2D194BED6F00907863 /* common_noread@2x.png in Resources */,
@@ -1400,6 +1420,7 @@
 				04B35BC1194BED6F00907863 /* 01_main_bg@2x.png in Resources */,
 				04B35C05194BED6F00907863 /* 04_appraisal_ok_h@2x.png in Resources */,
 				04B35C04194BED6F00907863 /* 04_appraisal_ok_h.png in Resources */,
+				809F08B919AE1C02005D257A /* 05_snkey_back@2x.png in Resources */,
 				04B35C0D194BED6F00907863 /* 04_appraisal_submit_n@2x.png in Resources */,
 				04B35BCF194BED6F00907863 /* 01_main_leftnavbar_member_n@2x.png in Resources */,
 				04B35C24194BED6F00907863 /* 06_appointment_moreviewbg.png in Resources */,
@@ -1410,6 +1431,7 @@
 				04287F39192E2CD800098767 /* Images.xcassets in Resources */,
 				04B35C0A194BED6F00907863 /* 04_appraisal_submit_h.png in Resources */,
 				04B35C1F194BED6F00907863 /* 06_appointment_cellimage@2x.png in Resources */,
+				809F08B519AE1558005D257A /* XYExchangeInternalView.xib in Resources */,
 				809F089F19A8DD92005D257A /* 02_detail_fix_h@2x.png in Resources */,
 				809F08A119A8DD92005D257A /* 02_detail_fix_n@2x.png in Resources */,
 				04B35C21194BED6F00907863 /* 06_appointment_celltextbg@2x.png in Resources */,
@@ -1447,6 +1469,7 @@
 				805B768C19815962005938F3 /* PRPAlertView.m in Sources */,
 				0428809D192E3D8D00098767 /* XYRankingViewController.m in Sources */,
 				042880C9192FC0C000098767 /* XYAppointmentTableViewCell.m in Sources */,
+				809F08AE19ADFD6E005D257A /* MTExchangeObject.m in Sources */,
 				0428808B192E33EC00098767 /* XYMemberGridViewCell.m in Sources */,
 				0428800A192E2D4900098767 /* AFHTTPRequestOperation.m in Sources */,
 				04287F33192E2CD800098767 /* main.m in Sources */,
@@ -1486,6 +1509,7 @@
 				0428800D192E2D4900098767 /* AFJSONUtilities.m in Sources */,
 				04288003192E2D4900098767 /* XYZDetailViewController.m in Sources */,
 				04288009192E2D4900098767 /* AFHTTPClient.m in Sources */,
+				809F08B219AE0E1A005D257A /* XYExchangeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

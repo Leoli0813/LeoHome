@@ -29,7 +29,7 @@
     
     // 2. create params.
     
-    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:appraise.styllistID,@"styllistid",appraise.storeID,@"storeid",appraise.environment,@"environment",appraise.service,@"service",appraise.skill,@"skill",appraise.consume,@"consume",appraise.remarks,@"remarks",nil];
+    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:appraise.styllistID,@"styllistid",appraise.storeID,@"storeid",appraise.environment,@"environment",appraise.service,@"service",appraise.skill,@"skill",appraise.consume,@"ammount",appraise.remarks,@"remarks",nil];
     
     // 3. load from server.
     [self.client postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -49,13 +49,13 @@
     }];
 }
 
-- (void)getPointWithPhone:(NSNumber *)phone WithStoreID:(NSString *)storeID withSuccess:(void(^)(NSString *resultStr))success failure:(void(^)(NSError *error))failure{
+- (void)getPointWithPhone:(NSNumber *)phone WithStoreID:(NSString *)storeID  withAmmout:(NSString *)ammount withSuccess:(void(^)(NSString *resultStr))success failure:(void(^)(NSError *error))failure{
     // 1. get full path.
     NSString *path = [MTDataAPIClient getFullPathFromPath:OrderSystem_GETPOINT];
     
     // 2. create params.
     
-    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:storeID,@"storeid",phone,@"phonenumber",nil];
+    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:storeID,@"storeid",phone,@"phonenumber",ammount,@"ammount",nil];
     
     // 3. load from server.
     [self.client postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {

@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *SNCodeTextField;
 @property (strong, nonatomic) IBOutlet UIImageView *messageImageView;
 @property (strong, nonatomic) IBOutlet UIButton *backgroundButton;
+@property (weak, nonatomic) IBOutlet UITableView *historyTableView;
+@property (weak, nonatomic) IBOutlet UIView *historyView;
 
 @end

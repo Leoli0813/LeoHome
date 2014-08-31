@@ -35,6 +35,8 @@
 
 //SN码
 #define OrderSystem_SNCODE [NSString stringWithFormat:@"%@/getSNcode.do",OrderSystem_BASE]
+//SN码历史兑换记录
+#define OrderSystem_EXCHANGE [NSString stringWithFormat:@"%@/exchangeList.do",OrderSystem_BASE]
 
 //预约
 #define OrderSystem_APPOINTMENT [NSString stringWithFormat:@"%@/reserve.do",OrderSystem_BASE]

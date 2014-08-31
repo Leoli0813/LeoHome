@@ -7,9 +7,12 @@
 //
 
 #import "MTDataAPIClient.h"
+#import "MTExchangeObject.h"
 
 @interface MTSNCodeClient : MTDataAPIClient
 
-- (void)modSNCodeWithString:(NSString *)snCode withSuccess:(void(^)(NSString *resultStr))success failure:(void(^)(NSError *error))failure;
+- (void)modSNCodeWithString:(NSString *)snCode withStoreID:(NSString *)storeid withSuccess:(void(^)(NSString *resultStr))success failure:(void(^)(NSError *error))failure;
+
+- (void)getExchangeWithStoreID:(NSString *)storeid withSuccess:(void(^)(MTExchangesMutableArray *result))success failure:(void(^)(NSError *error))failure;
 
 @end

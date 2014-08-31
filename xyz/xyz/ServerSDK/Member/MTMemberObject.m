@@ -19,13 +19,13 @@
     if (self = [super init]) {
         self.itemid = [JSON numberForKey:@"id"];
         self.storeid = [JSON numberForKey:@"storeid"];
-        self.technicalPoint = [JSON numberForKey:@"score1"];
+        self.technicalPoint = [JSON numberForKey:@"score_total"];
         self.servicePoint = [JSON numberForKey:@"score2"];
         self.remark = [JSON stringForKey:@"remark"];
         self.picUrl = [JSON stringForKey:@"url"];
         self.mobile = [JSON stringForKey:@"mobile"];
         self.name = [JSON stringForKey:@"name"];
-        self.creditID = [JSON stringForKey:@"creditID"];
+        self.creditID = [JSON stringForKey:@"idcard"];
     }
     
     return self;
